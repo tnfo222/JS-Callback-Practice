@@ -13,20 +13,24 @@ function move(element) {
 
         element.style.left = x + 'px'
         element.style.bottom = y + 'px'
-        element.style.zIndex = 1
         
+        //Updates left and bottom locations. Tried to add in the zIndex
         function moveCharacter(){ 
             if(direction === 'west'){
                 x-=1
+                element.style.zIndex = 1
             }
             if(direction === 'north'){
                 y+=1
+                element.style.zIndex = -1
             }
             if(direction === 'east'){
                 x+=1
+                element.style.zIndex = 1
             }
             if(direction === 'south'){
                 y-=1
+                element.style.zIndex = 1
             }
             element.style.left = x + 'px'
             element.style.bottom = y + 'px'

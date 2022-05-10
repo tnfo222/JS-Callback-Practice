@@ -3,6 +3,7 @@ move(inventory).to(0, 0)
 
 const character = newImage('assets/green-character/static.gif')
 
+//Changes the animations of walking depending upon direction
 function handleDirectionChange(direction){
     if(direction === null){
         character.src = `assets/green-character/static.gif`
